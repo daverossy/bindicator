@@ -2,6 +2,14 @@
 A visual alerting system to show which bin to collect, when.
 
 ## Bin Collection API
+The bin collection API is a Python Flask app backed by a local SQLite database, it is designed to allow for collection
+dates and bin colours to be mapped into an API that can be called the bindicator device itself if your local council
+doesn't have an API for calling this information already.
+
+There as a Dockerfile to package the app into an alpine OS image.
+
+
+
 ### GET /api/current_bin
 Returns current bin colour in JSON
 ```
