@@ -16,8 +16,7 @@ Returns current bin colour in JSON
 [
     {
         "bin_colour": "brown",
-        "collection_date": "27-08-2022",
-        "entry_id": 7
+        "collection_date": "27-08-2022"
     }
 ]
 ```

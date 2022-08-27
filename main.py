@@ -64,10 +64,7 @@ def get_collection_bin_colour():
 
         # convert row objects to dictionary
         for i in rows:
-            collection = {}
-            collection["entry_id"] = i["entry_id"]
-            collection["bin_colour"] = i["bin_colour"]
-            collection["collection_date"] = i["collection_date"]
+            collection = {"bin_colour": i["bin_colour"], "collection_date": i["collection_date"]}
             collections.append(collection)
 
     except:
