@@ -22,6 +22,8 @@ while True:
     collections = urequests.get("http://IP_ADDRESS:6000/api/current_bin").json()
     if len(collections) == 0:
         print('NO BIN DATES RETURNED FROM API')
+        pixels.clear()
+        pixels.show()
         time.sleep(5)
     else:
         for collection in collections:
@@ -41,5 +43,8 @@ while True:
                 pixels.show()
                 time.sleep(5)
             else:
-                print('ERROR!')
+                print('COLOUR NOT SUPPORTED!')
+                pixels.clear()
+                pixels.show()
+                time.sleep(1)
 
