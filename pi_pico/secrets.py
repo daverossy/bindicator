@@ -1,0 +1,2 @@
+SSID = "ADD_ME"
+PASSWORD = "ADD_ME"
