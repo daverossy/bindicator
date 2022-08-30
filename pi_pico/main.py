@@ -3,6 +3,7 @@ import secrets
 import time
 import urequests
 import time
+import gc
 from neopixel import Neopixel
 
 wlan = network.WLAN(network.STA_IF)
@@ -19,6 +20,7 @@ while True:
 pixels = Neopixel(7, 0, 0, "GRB")
 
 while True:
+    gc.collect()
     collections = urequests.get("http://IP_ADDRESS:6000/api/current_bin").json()
     if len(collections) == 0:
         print('NO BIN DATES RETURNED FROM API')
